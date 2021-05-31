@@ -30,10 +30,10 @@ import com.hills.mcs_02.account.RegexVerify;
 import com.hills.mcs_02.BaseActivity;
 import com.hills.mcs_02.dataBeans.BeanUserAccount;
 import com.hills.mcs_02.dataBeans.User;
-import com.hills.mcs_02.EmailRegiste.ActivityEmailRegister;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestUserAuth;
+import com.hills.mcs_02.emailregister.ActivityEmailRegister;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestUserAuth;
 import com.hills.mcs_02.R;
-import com.hills.mcs_02.sensorFunction.SenseDataUploadService;
+import com.hills.mcs_02.sensorfunction.SenseDataUploadService;
 
 public class ActivityLogin extends BaseActivity implements View.OnClickListener, View.OnFocusChangeListener,TextWatcher{
     private EditText loginUsernameEt;

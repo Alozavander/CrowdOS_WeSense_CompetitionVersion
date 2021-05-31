@@ -39,9 +39,9 @@ import java.util.Date;
 
 import com.hills.mcs_02.BaseActivity;
 import com.hills.mcs_02.dataBeans.Task;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestPublishTask;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestPublishTask;
 import com.hills.mcs_02.R;
-import com.hills.mcs_02.sensorFunction.SenseHelper;
+import com.hills.mcs_02.sensorfunction.SenseHelper;
 import com.hills.mcs_02.StringStore;
 
 public class ActivityPublishSensorTask extends BaseActivity implements View.OnClickListener, AMapLocationListener {

@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import com.hills.mcs_02.fragmentsPack.MCSRecyclerItemClickListener;
+import com.hills.mcs_02.fragmentspack.MCSRecyclerItemClickListener;
 import com.hills.mcs_02.R;
-import com.hills.mcs_02.SenseDataDisplay.SQLiteDataDisplay;
+import com.hills.mcs_02.sensedatadisplay.SQLiteDataDisplay;
 import com.hills.mcs_02.StringStore;
-import com.hills.mcs_02.sensorFunction.SenseHelper;
-import com.hills.mcs_02.sensorFunction.SensorSQLiteOpenHelper;
-import com.hills.mcs_02.viewsAdapters.AdapterRecyclerViewSettingSensorData;
+import com.hills.mcs_02.sensorfunction.SenseHelper;
+import com.hills.mcs_02.sensorfunction.SensorSQLiteOpenHelper;
+import com.hills.mcs_02.viewsadapters.AdapterRecyclerViewSettingSensorData;
 
 public class ActivityMineMinor5SensorDataSensorContent extends AppCompatActivity implements View.OnClickListener {
 

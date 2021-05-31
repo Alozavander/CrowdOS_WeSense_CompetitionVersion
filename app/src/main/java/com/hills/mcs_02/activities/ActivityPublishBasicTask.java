@@ -36,7 +36,7 @@ import java.text.SimpleDateFormat;
 
 import com.hills.mcs_02.BaseActivity;
 import com.hills.mcs_02.dataBeans.Task;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestPublishTask;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestPublishTask;
 import com.hills.mcs_02.R;
 
 public class ActivityPublishBasicTask extends BaseActivity implements AMapLocationListener {

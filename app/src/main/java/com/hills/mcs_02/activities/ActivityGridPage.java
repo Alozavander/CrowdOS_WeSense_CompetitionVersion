@@ -37,11 +37,10 @@ import java.util.Set;
 import com.hills.mcs_02.BaseActivity;
 import com.hills.mcs_02.dataBeans.BeanListViewHome;
 import com.hills.mcs_02.dataBeans.Task;
-import com.hills.mcs_02.fragmentsPack.MCSRecyclerItemClickListener;
-import com.hills.mcs_02.networkClasses.interfacesPack.GetNewTenRequestHomeTaskList;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestGridPageTaskList;
+import com.hills.mcs_02.fragmentspack.MCSRecyclerItemClickListener;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestGridPageTaskList;
 import com.hills.mcs_02.R;
-import com.hills.mcs_02.viewsAdapters.AdapterRecyclerViewHome;
+import com.hills.mcs_02.viewsadapters.AdapterRecyclerViewHome;
 
 public class ActivityGridPage extends BaseActivity {
     private String TAG = "Activity_gridPage";

@@ -16,12 +16,12 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hills.mcs_02.fragmentsPack.MCSRecyclerItemClickListener;
+import com.hills.mcs_02.fragmentspack.MCSRecyclerItemClickListener;
 import com.hills.mcs_02.R;
 import com.hills.mcs_02.StringStore;
-import com.hills.mcs_02.saveFile.FileExport;
-import com.hills.mcs_02.sensorFunction.SensorSQLiteOpenHelper;
-import com.hills.mcs_02.viewsAdapters.AdapterRecyclerViewSettingSensorData;
+import com.hills.mcs_02.exportfile.FileExport;
+import com.hills.mcs_02.sensorfunction.SensorSQLiteOpenHelper;
+import com.hills.mcs_02.viewsadapters.AdapterRecyclerViewSettingSensorData;
 
 public class ActivityMineMinor5SensorData extends AppCompatActivity implements View.OnClickListener {
     private RecyclerView mRecyclerView;

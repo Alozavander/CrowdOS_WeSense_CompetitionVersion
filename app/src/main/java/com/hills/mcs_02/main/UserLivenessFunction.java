@@ -1,20 +1,19 @@
 package com.hills.mcs_02.main;
 
+import android.content.Context;
+import android.util.Log;
+
 import com.google.gson.Gson;
+import com.hills.mcs_02.dataBeans.Liveness;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestLivenessLogout;
 
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-
-import android.content.Context;
-import android.util.Log;
-
-import com.hills.mcs_02.dataBeans.Liveness;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestLivenessLogout;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class UserLivenessFunction {
     private Context mContext;

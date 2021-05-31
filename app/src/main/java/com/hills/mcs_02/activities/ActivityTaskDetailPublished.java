@@ -37,10 +37,10 @@ import com.hills.mcs_02.BaseActivity;
 import com.hills.mcs_02.dataBeans.BeanUserTaskWithUser;
 import com.hills.mcs_02.dataBeans.UserTaskWithUser;
 import com.hills.mcs_02.dataBeans.Task;
-import com.hills.mcs_02.downloadPack.DownloadImageUtils;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestPublishedTaskDetail;
+import com.hills.mcs_02.downloadpack.DownloadImageUtils;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestPublishedTaskDetail;
 import com.hills.mcs_02.R;
-import com.hills.mcs_02.viewsAdapters.AdapterRecyclerViewPublishedTaskDetail;
+import com.hills.mcs_02.viewsadapters.AdapterRecyclerViewPublishedTaskDetail;
 
 public class ActivityTaskDetailPublished extends BaseActivity {
 

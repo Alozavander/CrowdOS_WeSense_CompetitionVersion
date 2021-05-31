@@ -13,8 +13,8 @@ import android.util.Log;
 
 import com.hills.mcs_02.BuildConfig;
 import com.hills.mcs_02.dataBeans.Liveness;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestLivenessLogin;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestMineMinor7Update;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestLivenessLogin;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestMineMinor7Update;
 
 
 public class MainRetrofitCallGenerator {

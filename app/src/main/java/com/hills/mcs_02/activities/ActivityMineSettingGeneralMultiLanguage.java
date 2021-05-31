@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.hills.mcs_02.BaseActivity;
-import com.hills.mcs_02.viewsAdapters.AdapterRadioBtnTvMultiLanguage;
+import com.hills.mcs_02.viewsadapters.AdapterRadioBtnTvMultiLanguage;
 import com.hills.mcs_02.R;
 
 public class ActivityMineSettingGeneralMultiLanguage extends BaseActivity {

@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.hills.mcs_02.languageChange.MultiLanguageUtil;
+import com.hills.mcs_02.languagechange.MultiLanguageUtil;
 
 public class BaseActivity extends AppCompatActivity {
     /** Language switching function */

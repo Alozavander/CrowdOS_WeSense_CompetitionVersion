@@ -27,7 +27,7 @@ import com.hills.mcs_02.account.RegexVerify;
 import com.hills.mcs_02.BaseActivity;
 import com.hills.mcs_02.dataBeans.BeanUserAccount;
 import com.hills.mcs_02.dataBeans.User;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestUserRegister;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestUserRegister;
 import com.hills.mcs_02.R;
 
 public class ActivityRegister extends BaseActivity implements View.OnClickListener{

@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.Random;
 
 import com.hills.mcs_02.BaseActivity;
-import com.hills.mcs_02.func_foodShare.FuncFoodShareAdapter;
-import com.hills.mcs_02.func_foodShare.beans.FuncFoodShareFoodShareListBean;
+import com.hills.mcs_02.foodsharefunction.FuncFoodShareAdapter;
+import com.hills.mcs_02.foodsharefunction.beans.FuncFoodShareFoodShareListBean;
 import com.hills.mcs_02.R;
 
 /** This class acts as a secondary page to start the Activity that serves as the cornerstone for the Fragment. */

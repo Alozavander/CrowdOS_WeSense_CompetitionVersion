@@ -33,9 +33,9 @@ import java.util.List;
 
 import com.hills.mcs_02.BaseActivity;
 import com.hills.mcs_02.BuildConfig;
-import com.hills.mcs_02.downloadPack.DownloadFileUtils;
-import com.hills.mcs_02.downloadPack.DownloadListener;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestMineMinor7Update;
+import com.hills.mcs_02.downloadpack.DownloadFileUtils;
+import com.hills.mcs_02.downloadpack.DownloadListener;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestMineMinor7Update;
 import com.hills.mcs_02.R;
 
 public class ActivityMineMinor7Setting extends BaseActivity {

@@ -42,8 +42,8 @@
         <activity android:name=".activities.ActivityMineMinor5SensorData" />
         <activity android:name=".activities.ActivityPublishSensorTask" />
         <activity android:name=".activities.ActivityPwdFind" />
-        <activity android:name=".EmailRegiste.ActivityEmailRegisterPasswordSet" />
-        <activity android:name=".EmailRegiste.ActivityEmailRegister" />
+        <activity android:name=".emailregister.ActivityEmailRegisterPasswordSet" />
+        <activity android:name=".emailregister.ActivityEmailRegister" />
         <activity
             android:name=".activities.ActivityPublishBasicTask"
             android:screenOrientation="portrait" />
@@ -78,7 +78,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".taskSubmit.ActivityTaskSubmit"
+            android:name=".tasksubmit.ActivityTaskSubmit"
             android:label="Activity_taskSubmit"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
@@ -143,7 +143,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".SenseDataDisplay.SQLiteDataDisplay"
+            android:name=".sensedatadisplay.SQLiteDataDisplay"
             android:label="SQLiteDataDisplay"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
@@ -153,9 +153,9 @@
             android:value="b0aff8ce65f37b6573acca8e9882f6d5" />
 
         <service android:name="com.amap.api.location.APSService" />
-        <service android:name=".sensorFunction.SensorService" />
-        <service android:name=".func_sportsShare.StepService" />
-        <service android:name=".sensorFunction.SenseDataUploadService"/>
+        <service android:name=".sensorfunction.SensorService" />
+        <service android:name=".sportsharefunction.StepService" />
+        <service android:name=".sensorfunction.SenseDataUploadService"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

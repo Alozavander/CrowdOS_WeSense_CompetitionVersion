@@ -28,10 +28,10 @@ import java.util.List;
 import com.hills.mcs_02.BaseActivity;
 import com.hills.mcs_02.dataBeans.BeanRecyclerViewMineMinor4Wallet;
 import com.hills.mcs_02.dataBeans.User;
-import com.hills.mcs_02.networkClasses.interfacesPack.GetRequestUserCoinsRankList;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestUserCoin;
+import com.hills.mcs_02.networkclasses.interfacesPack.GetRequestUserCoinsRankList;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestUserCoin;
 import com.hills.mcs_02.R;
-import com.hills.mcs_02.viewsAdapters.AdapterRecyclerViewMineMinor4Wallet;
+import com.hills.mcs_02.viewsadapters.AdapterRecyclerViewMineMinor4Wallet;
 
 public class ActivityMineMinor4Wallet extends BaseActivity {
 

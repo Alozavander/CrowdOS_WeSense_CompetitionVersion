@@ -21,8 +21,8 @@ import java.util.Date;
 
 import com.hills.mcs_02.R;
 import com.hills.mcs_02.StringStore;
-import com.hills.mcs_02.sensorFunction.SenseHelper;
-import com.hills.mcs_02.sensorFunction.SensorSQLiteOpenHelper;
+import com.hills.mcs_02.sensorfunction.SenseHelper;
+import com.hills.mcs_02.sensorfunction.SensorSQLiteOpenHelper;
 
 public class ActivityMineMinor5SensorDataDelete extends AppCompatActivity implements View.OnClickListener, TextWatcher {
     private static final String TAG = "SensorDataDelete";

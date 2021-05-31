@@ -35,10 +35,10 @@ import java.util.Set;
 import com.hills.mcs_02.BaseActivity;
 import com.hills.mcs_02.dataBeans.BeanListViewRemind;
 import com.hills.mcs_02.dataBeans.Task;
-import com.hills.mcs_02.fragmentsPack.MCSRecyclerItemClickListener;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestMineMinor1Published;
+import com.hills.mcs_02.fragmentspack.MCSRecyclerItemClickListener;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestMineMinor1Published;
 import com.hills.mcs_02.R;
-import com.hills.mcs_02.viewsAdapters.AdapterRecyclerViewRemind;
+import com.hills.mcs_02.viewsadapters.AdapterRecyclerViewRemind;
 
 public class ActivityMineMinor1Publish extends BaseActivity {
     private String TAG = "Activity_mine_minor1_published";

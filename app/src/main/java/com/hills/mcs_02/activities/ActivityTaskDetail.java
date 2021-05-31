@@ -29,13 +29,13 @@ import java.text.SimpleDateFormat;
 import com.hills.mcs_02.BaseActivity;
 import com.hills.mcs_02.dataBeans.Task;
 import com.hills.mcs_02.dataBeans.UserTask;
-import com.hills.mcs_02.networkClasses.interfacesPack.PostRequestUserTaskAdd;
-import com.hills.mcs_02.networkClasses.interfacesPack.QueryRequestTaskDetail;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestUserTaskAdd;
+import com.hills.mcs_02.networkclasses.interfacesPack.QueryRequestTaskDetail;
 import com.hills.mcs_02.R;
 import com.hills.mcs_02.StringStore;
-import com.hills.mcs_02.sensorFunction.SenseHelper;
-import com.hills.mcs_02.sensorFunction.SensorService;
-import com.hills.mcs_02.taskSubmit.ActivityTaskSubmit;
+import com.hills.mcs_02.sensorfunction.SenseHelper;
+import com.hills.mcs_02.sensorfunction.SensorService;
+import com.hills.mcs_02.tasksubmit.ActivityTaskSubmit;
 
 public class ActivityTaskDetail extends BaseActivity {
 

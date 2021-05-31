@@ -20,16 +20,16 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hills.mcs_02.func_sportsShare.StepService;
+import com.hills.mcs_02.sportsharefunction.StepService;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import com.hills.mcs_02.BaseActivity;
-import com.hills.mcs_02.func_sportsShare.beans.FuncSportShareBaseBean;
-import com.hills.mcs_02.func_sportsShare.beans.FuncSportShareStepShareListBean;
-import com.hills.mcs_02.func_sportsShare.FuncSportShareAdapter;
-import com.hills.mcs_02.func_sportsShare.UpdateUiCallBack;
+import com.hills.mcs_02.sportsharefunction.beans.FuncSportShareBaseBean;
+import com.hills.mcs_02.sportsharefunction.beans.FuncSportShareStepShareListBean;
+import com.hills.mcs_02.sportsharefunction.FuncSportShareAdapter;
+import com.hills.mcs_02.sportsharefunction.UpdateUiCallBack;
 import com.hills.mcs_02.R;
 
 /** This class acts as a secondary page to start the Activity that serves as the cornerstone for the Fragment. */
