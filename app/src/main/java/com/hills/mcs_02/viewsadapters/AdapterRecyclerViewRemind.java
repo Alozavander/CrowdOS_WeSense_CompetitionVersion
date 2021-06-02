@@ -78,14 +78,14 @@ public class AdapterRecyclerViewRemind extends RecyclerView.Adapter<RecyclerView
             holder.pictureIv.setImageResource(beanListViewRemind.getPicture());
 
             Task task = beanListViewRemind.getTask();
-            holder.userIdTv.setText(task.getUsername());
+            holder.userIdTv.setText(task.getUserName());
             holder.leftTimeTv.setText(beanListViewRemind.getDeadline());
             holder.describeTv.setText(beanListViewRemind.getKind());
             holder.taskNameTv.setText(beanListViewRemind.getTask().getTaskName());
 
-            if(task.getDescribeTask().length() > 20) holder.taskContentTv
-                .setText(task.getDescribeTask().substring(0,19) + "...");
-            else holder.taskContentTv.setText(task.getDescribeTask());
+            if(task.getDescribe_task().length() > 20) holder.taskContentTv
+                .setText(task.getDescribe_task().substring(0,19) + "...");
+            else holder.taskContentTv.setText(task.getDescribe_task());
             holder.coinsCountTv.setText(task.getCoin() + "");
             holder.taskCountTv.setText(task.getTotalNum() + "");
 

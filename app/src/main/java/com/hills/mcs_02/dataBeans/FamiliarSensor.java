@@ -1,7 +1,7 @@
 package com.hills.mcs_02.dataBeans;
 
 public class FamiliarSensor {
-    private Integer familiarSensorId;          /** the primary key */
+    private Integer familiar_sensorId;          /** the primary key */
     private Integer userId;                    /** user ID */
     private Integer taskId;                    /* task ID */
 
@@ -14,7 +14,7 @@ public class FamiliarSensor {
     private String sensorFile;   /** Sensor data file */
 
     public FamiliarSensor(Integer pFamiliarSensorId, Integer pUserId, Integer pTaskId, Float pLongitude, Float pLatitude, Float pSpeed, Float pSensorType, String pSensorFile) {
-        familiarSensorId = pFamiliarSensorId;
+        familiar_sensorId = pFamiliarSensorId;
         userId = pUserId;
         taskId = pTaskId;
         longitude = pLongitude;
@@ -24,8 +24,8 @@ public class FamiliarSensor {
         sensorFile = pSensorFile;
     }
 
-    public void setFamiliarSensorId(Integer pFamiliarSensorId) {
-        familiarSensorId = pFamiliarSensorId;
+    public void setFamiliar_sensorId(Integer pFamiliar_sensorId) {
+        familiar_sensorId = pFamiliar_sensorId;
     }
 
     public Integer getUserId() {
@@ -87,7 +87,7 @@ public class FamiliarSensor {
     @Override
     public String toString() {
         return "Familiar_Sensor{" +
-                "familiar_sensorId=" + familiarSensorId +
+                "familiar_sensorId=" + familiar_sensorId +
                 ", userId=" + userId +
                 ", taskId=" + taskId +
                 ", longitude=" + longitude +

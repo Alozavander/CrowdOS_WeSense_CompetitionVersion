@@ -126,10 +126,10 @@ public class ActivityMineMinor4Wallet extends BaseActivity {
                         if (mRequestUserCoinsRankList.size() > 0) {
                             for (User user : mRequestUserCoinsRankList) {
                                 BeanRecyclerViewMineMinor4Wallet rankItem = new BeanRecyclerViewMineMinor4Wallet();
-                                rankItem.setUserCoin(user.getCoin());
+                                rankItem.setUserCoins(user.getCoin());
                                 rankItem.setUserIcon(R.drawable.haimian_usericon);
                                 rankItem.setUserId(user.getUserId());
-                                rankItem.setUsername(user.getUsername());
+                                rankItem.setUserName(user.getUserName());
                                 userCoinsList.add(rankItem);
                             }
                         } else {

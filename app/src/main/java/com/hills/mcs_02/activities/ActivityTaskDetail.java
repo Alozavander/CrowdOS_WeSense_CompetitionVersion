@@ -1,15 +1,5 @@
 package com.hills.mcs_02.activities;
 
-import com.google.gson.Gson;
-
-import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -23,19 +13,28 @@ import android.widget.Scroller;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-
+import com.google.gson.Gson;
 import com.hills.mcs_02.BaseActivity;
+import com.hills.mcs_02.R;
+import com.hills.mcs_02.StringStore;
 import com.hills.mcs_02.dataBeans.Task;
 import com.hills.mcs_02.dataBeans.UserTask;
 import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestUserTaskAdd;
 import com.hills.mcs_02.networkclasses.interfacesPack.QueryRequestTaskDetail;
-import com.hills.mcs_02.R;
-import com.hills.mcs_02.StringStore;
 import com.hills.mcs_02.sensorfunction.SenseHelper;
 import com.hills.mcs_02.sensorfunction.SensorService;
 import com.hills.mcs_02.tasksubmit.ActivityTaskSubmit;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ActivityTaskDetail extends BaseActivity {
 
@@ -97,8 +96,8 @@ public class ActivityTaskDetail extends BaseActivity {
         String taskGson = getIntent().getStringExtra("taskGson");
         Gson gson = new Gson();
         task = gson.fromJson(taskGson, Task.class);
-        usernameTv.setText(task.getUsername());
-        taskContentTv.setText(task.getDescribeTask());
+        usernameTv.setText(task.getUserName());
+        taskContentTv.setText(task.getDescribe_task());
         coinCountTv.setText(task.getCoin().toString());
         deadlineTv.setText(new SimpleDateFormat("yyyy.MM.dd").format(task.getDeadline()));
         postTimeTv.setText(new SimpleDateFormat("yyyy.MM.dd").format(task.getPostTime()));
@@ -191,6 +190,8 @@ public class ActivityTaskDetail extends BaseActivity {
                                             SenseHelper lSenseHelper = new SenseHelper(
                                                 ActivityTaskDetail.this);
                                             for(int i : types){
+                                                /** -1 :all sensors; -2:senseuploadServiceTag*/
+                                                if(i<0) continue;
                                                 if(!lSenseHelper.containSensor(i)) {
                                                     canAccept = false;
                                                     break;
@@ -198,7 +199,7 @@ public class ActivityTaskDetail extends BaseActivity {
                                             }
                                         }
                                     }
-
+                                    if(sensorTypesString.equals("null")) canAccept = true;
                                     if(canAccept) {
                                         addUserTaskRequest(content);
                                         mToSensorServiceIntent = new Intent(ActivityTaskDetail.this, SensorService.class);
@@ -309,7 +310,11 @@ public class ActivityTaskDetail extends BaseActivity {
                             finish();
                         }
                     });
-                } else {
+                } else if (response.code() == 403){
+                    Log.e(TAG,getResources().getString(R.string.AcceptExpired));
+                    Toast.makeText(CONTEXT, getResources().getString(R.string.AcceptTaskFailed) + "\n" + getResources().getString(R.string.AcceptExpired), Toast.LENGTH_SHORT).show();
+                }else{
+                    Log.e(TAG,getResources().getString(R.string.AcceptTaskFailed));
                     Toast.makeText(CONTEXT, getResources().getString(R.string.AcceptTaskFailed), Toast.LENGTH_SHORT).show();
                 }
             }

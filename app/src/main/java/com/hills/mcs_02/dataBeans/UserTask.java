@@ -1,10 +1,10 @@
 package com.hills.mcs_02.dataBeans;
 
 public class UserTask {
-    private Integer userTaskId;
+    private Integer user_taskId;
     private Integer userId;                    /** User-task ID */
     private Integer taskId;
-    private Integer userTaskStatus;             /** User-task execution status */
+    private Integer user_taskStatus;             /** User-task execution status */
     private String content;                    /** Task Completed Content */
     private String image;                       /** Mission completed picture information */
     private Integer type;                        /** Upload type information; 0 is plain text; 1 is the picture; 2 is audio; 3 for the video */
@@ -12,17 +12,17 @@ public class UserTask {
 
     public UserTask(Integer userTaskId, Integer userId, Integer taskId,
                      int userTaskStatus, String content, String image, Integer type) {
-        this.userTaskId = userTaskId;
+        this.user_taskId = userTaskId;
         this.userId = userId;
         this.taskId = taskId;
-        this.userTaskStatus = userTaskStatus;
+        this.user_taskStatus = userTaskStatus;
         this.content = content;
         this.image = image;
         this.type = type;
     }
 
-    public Integer getUserTaskId() {
-        return userTaskId;
+    public Integer getUser_taskId() {
+        return user_taskId;
     }
 
     public Integer getUserId() {
@@ -41,8 +41,8 @@ public class UserTask {
         return image;
     }
 
-    public void setUserTaskId(Integer userTaskId) {
-        this.userTaskId = userTaskId;
+    public void setUser_taskId(Integer userTaskId) {
+        this.user_taskId = userTaskId;
     }
 
     public void setUserId(Integer userId) {
@@ -72,10 +72,10 @@ public class UserTask {
     @Override
     public String toString() {
         return "User_Task{" +
-                "user_taskId=" + userTaskId +
+                "user_taskId=" + user_taskId +
                 ", userId=" + userId +
                 ", taskId=" + taskId +
-                ", user_taskStatus=" + userTaskStatus +
+                ", user_taskStatus=" + user_taskStatus +
                 ", content='" + content + '\'' +
                 ", image='" + image + '\'' +
                 ", type='" + type + '\'' +

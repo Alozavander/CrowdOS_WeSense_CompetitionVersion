@@ -223,7 +223,7 @@ public class ActivityGridPage extends BaseActivity {
                                 Log.i(TAG,task.toString());
                                 if (!mHashSetTaskId.contains(task.getTaskId())) {
                                     mHashSetTaskId.add(task.getTaskId());
-                                    tempList.add(new BeanListViewHome(R.drawable.cat_usericon, task.getUsername(), photoPath[new Random().nextInt(3)], "普通任务", task));
+                                    tempList.add(new BeanListViewHome(R.drawable.cat_usericon, task.getUserName(), photoPath[new Random().nextInt(3)], "普通任务", task));
                                 }
                             }
                         } else {

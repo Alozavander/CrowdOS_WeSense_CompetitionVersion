@@ -96,8 +96,8 @@ public class ActivityTaskDetailPublished extends BaseActivity {
         String taskGson = getIntent().getStringExtra("taskGson");
         Gson gson = new Gson();
         task = gson.fromJson(taskGson, Task.class);
-        usernameTv.setText(task.getUsername());
-        taskContentTv.setText(task.getDescribeTask());
+        usernameTv.setText(task.getUserName());
+        taskContentTv.setText(task.getDescribe_task());
         coinCountTv.setText(task.getCoin().toString());
         taskNameTv.setText(task.getTaskName());
         deadlineTv.setText(new SimpleDateFormat("yyyy.MM.dd").format(task.getDeadline()));
@@ -190,11 +190,11 @@ public class ActivityTaskDetailPublished extends BaseActivity {
                         if (responseList.size() > 0) {
                             /** Convert between two lists */
                             for (UserTaskWithUser userTaskWihUser : responseList) {
-                                if (!mHashSetTaskId.contains(userTaskWihUser.getUserTask().getUserTaskId())) {
-                                    mHashSetTaskId.add(userTaskWihUser.getUserTask().getUserTaskId());
-                                    if (userTaskWihUser.getUserTask().getImage() != null) {
+                                if (!mHashSetTaskId.contains(userTaskWihUser.getUt().getUser_taskId())) {
+                                    mHashSetTaskId.add(userTaskWihUser.getUt().getUser_taskId());
+                                    if (userTaskWihUser.getUt().getImage() != null) {
                                         DownloadImageUtils utils = new DownloadImageUtils(getString(R.string.base_url));
-                                        tempList.add(new BeanUserTaskWithUser(R.drawable.haimian_usericon, utils.downloadFile(userTaskWihUser.getUserTask().getImage()), userTaskWihUser));
+                                        tempList.add(new BeanUserTaskWithUser(R.drawable.haimian_usericon, utils.downloadFile(userTaskWihUser.getUt().getImage()), userTaskWihUser));
                                     } else {
                                         tempList.add(new BeanUserTaskWithUser(R.drawable.haimian_usericon, userTaskWihUser));
                                         Log.i(TAG, userTaskWihUser.toString());

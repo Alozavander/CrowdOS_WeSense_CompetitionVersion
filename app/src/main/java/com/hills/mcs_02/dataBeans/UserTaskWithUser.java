@@ -1,31 +1,31 @@
 package com.hills.mcs_02.dataBeans;
 
 public class UserTaskWithUser {
-    private User user;
-    private UserTask userTask;
+    private User u;
+    private UserTask ut;
 
     public UserTaskWithUser(User user, UserTask userTask) {
-        this.user = user;
-        this.userTask = userTask;
+        this.u = user;
+        this.ut = userTask;
     }
 
-    public User getUser() {
-        return user;
+    public User getU() {
+        return u;
     }
 
-    public UserTask getUserTask() {
-        return userTask;
+    public UserTask getUt() {
+        return ut;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setU(User user) {
+        this.u = user;
     }
 
     @Override
     public String toString() {
         return "Combine_u_ut{" +
-                "u=" + user +
-                ", ut=" + userTask +
+                "u=" + u +
+                ", ut=" + ut +
                 '}';
     }
 }

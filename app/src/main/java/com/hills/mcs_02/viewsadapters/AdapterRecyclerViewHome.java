@@ -84,7 +84,7 @@ public class AdapterRecyclerViewHome extends RecyclerView.Adapter<RecyclerView.V
             holder.timeTv.setText(bean.getPostTime());
             holder.photoIv.setImageResource(bean.getPhoto());
             holder.userIconIv.setImageResource(bean.getUserIcon());
-            holder.userIdTv.setText(bean.getUserId());
+            holder.userIdTv.setText(bean.getUserID());
             holder.taskCountTv.setText(bean.getTaskCount() + "");
         }else{
             Log.i(TAG,"instance 错误");

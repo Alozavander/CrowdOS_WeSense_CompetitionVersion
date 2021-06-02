@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 public class BeanListViewHome {
     private int userIcon;
     private int photo;
-    private String userId;
+    private String userID;
     private String describe;
     private Task task;
 
@@ -17,7 +17,7 @@ public class BeanListViewHome {
 
     public BeanListViewHome(int userIcon, String userId, int photo, String describe, Task task){
         this.userIcon = userIcon;
-        this.userId = userId;
+        this.userID = userId;
         this.photo = photo;
         this.describe = describe;
         this.task = task;
@@ -31,8 +31,8 @@ public class BeanListViewHome {
         return photo;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUserID() {
+        return userID;
     }
 
     public String getPostTime() {
@@ -47,7 +47,7 @@ public class BeanListViewHome {
     }
 
     public String getTaskContent() {
-        return task.getDescribeTask();
+        return task.getDescribe_task();
     }
 
     public String getCoinsCount() {

@@ -21,19 +21,19 @@ public class UserSerialized extends User implements Serializable {
         this.userId = userId;
     }
 
-    public String getUsername() {
+    public String getUserName() {
         return userName;
     }
 
-    public void setUsername(String username) {
+    public void setUserName(String username) {
         this.userName = username;
     }
 
-    public String getPassword() {
+    public String getPassWord() {
         return passWord;
     }
 
-    public void setPassword(String password) {
+    public void setPassWord(String password) {
         this.passWord = password;
     }
 

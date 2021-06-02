@@ -20,3 +20,5 @@ Trustie:https://forgeplus.trustie.net/projects/Alozavander/CrowdOS_WeSense_Compe
 
 ## Open Source Document
 
+[Document](./开源文档.docx)
+

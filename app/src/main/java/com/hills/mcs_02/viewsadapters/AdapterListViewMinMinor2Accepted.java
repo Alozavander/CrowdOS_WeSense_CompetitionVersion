@@ -61,11 +61,11 @@ public class AdapterListViewMinMinor2Accepted extends BaseAdapter {
 
         BeanListViewMineMinor2Accepted bean = mBeanListViewMineMinor2Accepted.get(position);
         viewHolder.picIv.setImageResource(bean.getPic());
-        viewHolder.taskIdTv.setText(bean.getTaskId());
+        viewHolder.taskIdTv.setText(bean.getTaskID());
         viewHolder.taskStateTv.setText(bean.getTaskState());
         viewHolder.describeTv.setText(bean.getDescribe());
         viewHolder.taskContentTv.setText(bean.getTaskContent());
-        viewHolder.coinCountTv.setText(bean.getCoinCount());
+        viewHolder.coinCountTv.setText(bean.getCoinsCount());
         viewHolder.taskCountTv.setText(bean.getTaskCount());
 
         return convertView;

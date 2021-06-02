@@ -16,6 +16,7 @@ import androidx.annotation.Nullable;
 
 import com.google.gson.Gson;
 import com.hills.mcs_02.MainActivity;
+import com.hills.mcs_02.R;
 import com.hills.mcs_02.StringStore;
 import com.hills.mcs_02.dataBeans.SensorDetail;
 import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestSensorDetailUploadService;
@@ -94,7 +95,7 @@ public class SenseDataUploadService extends Service {
       }
     };
     //per hour a collection for a sensing data
-    mTimer.schedule(task, 1, 60 * 60 * 1000);
+    mTimer.schedule(task, 10*60*1000, 60 * 60 * 1000);
     Log.i(TAG, "Upload Timer Task now starts");
   }
 
@@ -149,7 +150,7 @@ public class SenseDataUploadService extends Service {
     RequestBody requestBody = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"), postTask);
     /** Create the MultiparBody parsing the file */
     MultipartBody.Part body = MultipartBody.Part.createFormData("file", pSaveFile.getName(), RequestBody.create(okhttp3.MediaType.parse("file/*"), pSaveFile));
-    Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:10101/").addConverterFactory(GsonConverterFactory.create()).build();
+    Retrofit retrofit = new Retrofit.Builder().baseUrl(getResources().getString(R.string.base_url)).addConverterFactory(GsonConverterFactory.create()).build();
     /** Create the network api instance */
     PostRequestSensorDetailUploadService request = retrofit.create(
         PostRequestSensorDetailUploadService.class);

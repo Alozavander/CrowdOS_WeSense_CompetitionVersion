@@ -3,9 +3,9 @@ package com.hills.mcs_02.dataBeans;
 public class BeanRecyclerViewMineMinor4Wallet {
 
     private int userId;
-    private String username;
+    private String userName;
     private int userIcon;
-    private int userCoin;
+    private int userCoins;
 
     public BeanRecyclerViewMineMinor4Wallet(){
         super();
@@ -19,12 +19,12 @@ public class BeanRecyclerViewMineMinor4Wallet {
         this.userId = userId;
     }
 
-    public String getUsername(){
-        return username;
+    public String getUserName(){
+        return userName;
     }
 
-    public void setUsername(String username){
-        this.username = username;
+    public void setUserName(String username){
+        this.userName = username;
     }
 
     public int getUserIcon(){
@@ -35,19 +35,19 @@ public class BeanRecyclerViewMineMinor4Wallet {
         this.userIcon = userIcon;
     }
 
-    public int getUserCoin(){
-        return userCoin;
+    public int getUserCoins(){
+        return userCoins;
     }
 
-    public void setUserCoin(int userCoin){
-        this.userCoin = userCoin;
+    public void setUserCoins(int userCoin){
+        this.userCoins = userCoin;
     }
 
     @Override
     public String toString(){
         return "userId:" + userId + ","
-                + "userName:" + username + ","
-                + "userCoins:" + userCoin;
+                + "userName:" + userName + ","
+                + "userCoins:" + userCoins;
     }
 
 }

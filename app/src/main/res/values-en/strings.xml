@@ -278,5 +278,6 @@
     <string name="intent_taskSensorTypes_name">SensorTypesForSenseTask</string>
     <string name="handling">Handling...</string>
     <string name="failToAcceptTask">Fail to accept task.</string>
+    <string name="AcceptExpired">The task is expired</string>
 
 </resources>

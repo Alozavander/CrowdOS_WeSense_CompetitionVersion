@@ -2,13 +2,13 @@ package com.hills.mcs_02.dataBeans;
 
 public class BeanListViewMineMinor6Notification {
     private int icon;
-    private String Id;
+    private String ID;
     private String time;
     private String content;
 
     public BeanListViewMineMinor6Notification(int icon, String Id, String time, String content) {
         this.icon = icon;
-        this.Id = Id;
+        this.ID = Id;
         this.time = time;
         this.content = content;
     }
@@ -17,8 +17,8 @@ public class BeanListViewMineMinor6Notification {
         return icon;
     }
 
-    public String getId() {
-        return Id;
+    public String getID() {
+        return ID;
     }
 
     public String getTime() {
@@ -29,8 +29,8 @@ public class BeanListViewMineMinor6Notification {
         return content;
     }
 
-    public void setId(String id) {
-        this.Id = id;
+    public void setID(String id) {
+        this.ID = id;
     }
 
     public void setTime(String time) {

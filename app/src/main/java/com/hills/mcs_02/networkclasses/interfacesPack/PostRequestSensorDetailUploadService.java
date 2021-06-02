@@ -11,6 +11,6 @@ import retrofit2.http.Part;
 /** Upload File */
 public interface PostRequestSensorDetailUploadService {
     @Multipart
-    @POST("/uploadSensorFileMessageDetail")
+    @POST("/sensordetail/uploadSensorFileMessageDetail")
     Call<ResponseBody> uploadSensorMessage(@Part("sensor_detail") RequestBody sensorDetail, @Part MultipartBody.Part file);
 }

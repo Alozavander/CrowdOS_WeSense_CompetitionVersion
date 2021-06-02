@@ -2,11 +2,11 @@ package com.hills.mcs_02.dataBeans;
 
 public class BeanListViewMineMinor2Accepted {
     private int pic;
-    private String taskId;
+    private String taskID;
     private String taskState;
     private String describe;
     private String taskContent;
-    private String coinCount;
+    private String coinsCount;
     private String taskCount;
     private String taskReward;
 
@@ -14,8 +14,8 @@ public class BeanListViewMineMinor2Accepted {
         return pic;
     }
 
-    public String getTaskId() {
-        return taskId;
+    public String getTaskID() {
+        return taskID;
     }
 
     public String getTaskState() {
@@ -30,8 +30,8 @@ public class BeanListViewMineMinor2Accepted {
         return taskContent;
     }
 
-    public String getCoinCount() {
-        return coinCount;
+    public String getCoinsCount() {
+        return coinsCount;
     }
 
     public String getTaskCount() {
@@ -46,8 +46,8 @@ public class BeanListViewMineMinor2Accepted {
         this.pic = pic;
     }
 
-    public void setTaskId(String taskId) {
-        this.taskId = taskId;
+    public void setTaskID(String taskId) {
+        this.taskID = taskId;
     }
 
     public void setTaskState(String taskState) {
@@ -58,8 +58,8 @@ public class BeanListViewMineMinor2Accepted {
         this.describe = describe;
     }
 
-    public void setCoinCount(String coinCount) {
-        this.coinCount = coinCount;
+    public void setCoinsCount(String coinCount) {
+        this.coinsCount = coinCount;
     }
 
     public void setTaskCount(String taskCount) {

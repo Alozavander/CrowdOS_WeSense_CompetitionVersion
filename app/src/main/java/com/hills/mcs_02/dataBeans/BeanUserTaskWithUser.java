@@ -28,11 +28,11 @@ public class BeanUserTaskWithUser {
     }
 
     public User getUser() {
-        return mUserTaskWithUser.getUser();
+        return mUserTaskWithUser.getU();
     }
 
     public UserTask getUserTask() {
-        return mUserTaskWithUser.getUserTask();
+        return mUserTaskWithUser.getUt();
     }
 
     public File getPic() {

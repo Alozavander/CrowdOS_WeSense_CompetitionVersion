@@ -73,10 +73,10 @@ public class AdapterListViewRemind extends BaseAdapter {
         viewHolder.pictureIv.setImageResource(beanListViewRemind.getPicture());
 
         Task task = beanListViewRemind.getTask();
-        viewHolder.userIdTv.setText(task.getUsername());
+        viewHolder.userIdTv.setText(task.getUserName());
         viewHolder.leftTimeTv.setText(beanListViewRemind.getDeadline());
         viewHolder.describeTv.setText(beanListViewRemind.getKind());
-        viewHolder.taskContentTv.setText(task.getDescribeTask().substring(0,19) + "...");
+        viewHolder.taskContentTv.setText(task.getDescribe_task().substring(0,19) + "...");
         viewHolder.coinsCountTv.setText(task.getCoin() + "");
         viewHolder.taskCountTv.setText(task.getTotalNum() + "");
 

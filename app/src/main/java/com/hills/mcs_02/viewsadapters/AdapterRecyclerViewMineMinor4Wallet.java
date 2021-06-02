@@ -47,8 +47,8 @@ public class AdapterRecyclerViewMineMinor4Wallet extends RecyclerView.Adapter<vi
     public void onBindViewHolder(viewHolder holder, int position) {
         BeanRecyclerViewMineMinor4Wallet user_coins = mBeanRecyclerViewMineMinor4WalletList.get(position);
         holder.userCoinImage.setImageResource(user_coins.getUserIcon());
-        holder.username.setText(user_coins.getUsername());
-        holder.userCoin.setText(Integer.toString(user_coins.getUserCoin()));
+        holder.username.setText(user_coins.getUserName());
+        holder.userCoin.setText(Integer.toString(user_coins.getUserCoins()));
     }
 
     @Override

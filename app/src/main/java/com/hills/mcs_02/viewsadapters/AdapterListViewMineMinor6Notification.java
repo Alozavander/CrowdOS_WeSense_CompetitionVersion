@@ -61,7 +61,7 @@ public class AdapterListViewMineMinor6Notification extends BaseAdapter {
 
         BeanListViewMineMinor6Notification bean = mBeanListViewMineMinor6Notifications.get(position);
         viewHolder.iconIv.setImageResource(bean.getIcon());
-        viewHolder.idTv.setText(bean.getId());
+        viewHolder.idTv.setText(bean.getID());
         viewHolder.timeTv.setText(bean.getTime());
         viewHolder.contentTv.setText(bean.getContent());
 

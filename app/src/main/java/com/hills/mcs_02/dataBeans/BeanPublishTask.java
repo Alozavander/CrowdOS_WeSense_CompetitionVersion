@@ -2,15 +2,15 @@ package com.hills.mcs_02.dataBeans;
 
 class BeanPublishTask {
     private String postTime;
-    private String deadline;
-    private String postId;
+    private String deadLine;
+    private String postID;
     private String coin;
     private String Text;
 
     public BeanPublishTask(String postTime, String deadline, String postId, String coin, String text) {
         this.postTime = postTime;
-        this.deadline = deadline;
-        this.postId = postId;
+        this.deadLine = deadline;
+        this.postID = postId;
         this.coin = coin;
         Text = text;
     }
@@ -19,12 +19,12 @@ class BeanPublishTask {
         return postTime;
     }
 
-    public String getDeadline() {
-        return deadline;
+    public String getDeadLine() {
+        return deadLine;
     }
 
-    public String getPostId() {
-        return postId;
+    public String getPostID() {
+        return postID;
     }
 
     public String getCoin() {
@@ -39,12 +39,12 @@ class BeanPublishTask {
         this.postTime = postTime;
     }
 
-    public void setDeadline(String deadline) {
-        this.deadline = deadline;
+    public void setDeadLine(String deadline) {
+        this.deadLine = deadline;
     }
 
-    public void setPostId(String postId) {
-        this.postId = postId;
+    public void setPostID(String postId) {
+        this.postID = postId;
     }
 
     public void setText(String text) {
@@ -55,8 +55,8 @@ class BeanPublishTask {
     public String toString() {
         return "Bean_publish_Task{" +
                 "postTime='" + postTime + '\'' +
-                ", deadLine='" + deadline + '\'' +
-                ", postID='" + postId + '\'' +
+                ", deadLine='" + deadLine + '\'' +
+                ", postID='" + postID + '\'' +
                 ", coin='" + coin + '\'' +
                 ", Text='" + Text + '\'' +
                 '}';

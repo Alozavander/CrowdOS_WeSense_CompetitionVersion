@@ -132,7 +132,7 @@ public class ActivityEmailRegister extends AppCompatActivity implements View.OnC
     private void emailRegisterRequest() {
         String usernameMail = ((EditText)findViewById(R.id.activity_emaile_registe_email_input_et)).getText().toString();
         User lUser = new User();
-        lUser.setUsername(usernameMail);
+        lUser.setUserName(usernameMail);
         Gson lGson = new Gson();
         String requestContent = lGson.toJson(lUser);
         RequestBody lRequestBody = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),requestContent);

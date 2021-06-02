@@ -228,7 +228,7 @@ public class ActivityLogin extends BaseActivity implements View.OnClickListener,
                         SharedPreferences.Editor editor = userSP.edit();
                         editor.putString("userID", user.getUserId() + "");
                         Log.i(TAG, user.getUserId() + "");
-                        editor.putString("userName", user.getUsername());
+                        editor.putString("userName", user.getUserName());
                         editor.commit();
                         /** Start the phone data service */
                         Intent lIntent = new Intent(ActivityLogin .this, SenseDataUploadService.class);

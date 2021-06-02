@@ -9,9 +9,9 @@ public class Task {
     private Date postTime;               /** Release date */
     private Date deadLine;
     private Integer userId;
-    private String username;
+    private String userName;
     private Float coin;                  /** incentives */
-    private String describeTask;         /**  Task description */
+    private String describe_task;         /**  Task description */
     private Integer totalNum;            /** The total number of people working on this mission */
     private Integer taskStatus;          /** The execution status of the task */
     private Integer taskKind;            /**  Task type: 0- Public Safety, 1- Environmental Research, 2- People's Daily, 3- Business Applications, 4- Other*/
@@ -29,9 +29,9 @@ public class Task {
         this.postTime = postTime;
         this.deadLine = deadLine;
         this.userId = userId;
-        this.username = username;
+        this.userName = username;
         this.coin = coin;
-        this.describeTask = describeTask;
+        this.describe_task = describeTask;
         this.totalNum = totalNum;
         this.taskStatus = taskStatus;
         this.taskKind = taskKind;
@@ -46,9 +46,9 @@ public class Task {
         this.postTime = postTime;
         this.deadLine = deadLine;
         this.userId = userId;
-        this.username = username;
+        this.userName = username;
         this.coin = coin;
-        this.describeTask = describeTask;
+        this.describe_task = describeTask;
         this.totalNum = totalNum;
         this.taskStatus = taskStatus;
         this.taskKind = taskKind;
@@ -63,9 +63,9 @@ public class Task {
         postTime = pPostTime;
         deadLine = pDeadline;
         userId = pUserId;
-        username = pUsername;
+        userName = pUsername;
         coin = pCoin;
-        describeTask = pDescribeTask;
+        describe_task = pDescribeTask;
         totalNum = pTotalNum;
         taskStatus = pTaskStatus;
         taskKind = pTaskKind;
@@ -94,16 +94,16 @@ public class Task {
         return userId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
     public Float getCoin() {
         return coin;
     }
 
-    public String getDescribeTask() {
-        return describeTask;
+    public String getDescribe_task() {
+        return describe_task;
     }
 
     public Integer getTotalNum() {
@@ -134,12 +134,12 @@ public class Task {
         this.userId = userId;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String username) {
+        this.userName = username;
     }
 
-    public void setDescribeTask(String describeTask) {
-        this.describeTask = describeTask;
+    public void setDescribe_task(String describeTask) {
+        this.describe_task = describeTask;
     }
 
     public String getSensorTypes() {
@@ -174,9 +174,9 @@ public class Task {
                 ", postTime=" + postTime +
                 ", deadLine=" + deadLine +
                 ", userId=" + userId +
-                ", userName='" + username + '\'' +
+                ", userName='" + userName + '\'' +
                 ", coin=" + coin +
-                ", describe_task='" + describeTask + '\'' +
+                ", describe_task='" + describe_task + '\'' +
                 ", totalNum=" + totalNum +
                 ", taskStatus=" + taskStatus +
                 ", taskKind=" + taskKind +

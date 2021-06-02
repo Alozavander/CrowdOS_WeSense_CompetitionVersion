@@ -279,4 +279,5 @@
     <string name="intent_taskSensorTypes_name">感知任务传感器类型</string>
     <string name="handling">处理中...</string>
     <string name="failToAcceptTask">接受任务失败</string>
+    <string name="AcceptExpired">任务已过期</string>
 </resources>

@@ -69,7 +69,7 @@ public class AdapterRecyclerViewPublishedTaskDetail extends RecyclerView.Adapter
             BeanUserTaskWithUser beanCombine_uut = (BeanUserTaskWithUser) mBeanUserTaskWithUser.get(POSITION);
 
             holder.userIconIv.setImageResource(beanCombine_uut.getUserIcon());
-            holder.usernameTv.setText(beanCombine_uut.getUser().getUsername());
+            holder.usernameTv.setText(beanCombine_uut.getUser().getUserName());
 
             /** Load the picture */
             File pic = beanCombine_uut.getPic();
