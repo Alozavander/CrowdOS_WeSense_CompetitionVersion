@@ -199,7 +199,7 @@ public class ActivityTaskDetail extends BaseActivity {
                                             }
                                         }
                                     }
-                                    if(sensorTypesString.equals("null")) canAccept = true;
+                                    if(sensorTypesString == null || sensorTypesString.equals("null")) canAccept = true;
                                     if(canAccept) {
                                         addUserTaskRequest(content);
                                         mToSensorServiceIntent = new Intent(ActivityTaskDetail.this, SensorService.class);
