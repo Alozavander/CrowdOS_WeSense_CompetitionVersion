@@ -1,20 +1,11 @@
 package com.hills.mcs_02.emailregister;
 
-import com.google.gson.Gson;
-
-import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,15 +14,24 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+import com.hills.mcs_02.BaseActivity;
+import com.hills.mcs_02.R;
 import com.hills.mcs_02.account.RegexVerify;
 import com.hills.mcs_02.dataBeans.BeanUserAccount;
 import com.hills.mcs_02.dataBeans.User;
 import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestUserRegister;
-import com.hills.mcs_02.R;
 
-public class ActivityEmailRegisterPasswordSet extends AppCompatActivity implements View.OnClickListener {
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+public class ActivityEmailRegisterPasswordSet extends BaseActivity implements View.OnClickListener {
     private String TAG = "Activity_EmailRegister_PasswordSet";
     private EditText mPwdSetEt;
     private EditText mPwdNicknameEt;
@@ -90,6 +90,7 @@ public class ActivityEmailRegisterPasswordSet extends AppCompatActivity implemen
 
             @Override
             public void afterTextChanged(Editable edit) {
+                Log.i("Register tag",edit.toString());
                 if (!regexVerify.registerUsernameVerfy(edit.toString())) {
                     mPwdInputErrorTv.setVisibility(View.VISIBLE);
                     mFinishTag[0] = false;

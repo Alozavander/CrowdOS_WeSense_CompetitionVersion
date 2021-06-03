@@ -1,15 +1,5 @@
 package com.hills.mcs_02.activities;
 
-import com.google.gson.Gson;
-
-import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -21,14 +11,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.IOException;
-
-import com.hills.mcs_02.account.RegexVerify;
+import com.google.gson.Gson;
 import com.hills.mcs_02.BaseActivity;
+import com.hills.mcs_02.R;
+import com.hills.mcs_02.account.RegexVerify;
 import com.hills.mcs_02.dataBeans.BeanUserAccount;
 import com.hills.mcs_02.dataBeans.User;
 import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestUserRegister;
-import com.hills.mcs_02.R;
+
+import java.io.IOException;
+
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ActivityRegister extends BaseActivity implements View.OnClickListener{
     private EditText registerUsernameEt;
@@ -169,6 +168,7 @@ public class ActivityRegister extends BaseActivity implements View.OnClickListen
             registerBtn.setEnabled(true);
         }else registerBtn.setEnabled(false);
     }
+
 
     @Override
     public void onClick(View view){

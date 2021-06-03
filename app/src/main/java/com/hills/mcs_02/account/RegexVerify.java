@@ -10,7 +10,7 @@ public class RegexVerify {
         /** Account password check regular expression. */
         this.regexes.put("pwdRegex", "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$");
         /**  User name regular expression. */
-        this.regexes.put("registerUsernameRegex", "^[a-zA-Z][a-zA-Z0-9]{4,16}$");
+        this.regexes.put("registerUsernameRegex", "^[a-zA-Z][a-zA-Z0-9]{6,16}$");
     }
     public boolean pwdVerify(String pwdInput) {
         String regex = this.regexes.get("pwdRegex");
@@ -19,7 +19,7 @@ public class RegexVerify {
     }
 
     public boolean registerUsernameVerfy(String usernameInput){
-        String regex = this.regexes.get("registeUsernameRegex");
+        String regex = this.regexes.get("registerUsernameRegex");
         if(usernameInput.matches(regex)) return true;
         else return false;
     }

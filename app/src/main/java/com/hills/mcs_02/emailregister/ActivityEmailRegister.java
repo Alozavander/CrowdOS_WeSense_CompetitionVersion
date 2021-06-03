@@ -1,15 +1,5 @@
 package com.hills.mcs_02.emailregister;
 
-import com.google.gson.Gson;
-
-import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -23,13 +13,22 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+import com.hills.mcs_02.BaseActivity;
+import com.hills.mcs_02.R;
 import com.hills.mcs_02.dataBeans.User;
 import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestEmailRegisterAddressCheck;
-import com.hills.mcs_02.R;
 
-public class ActivityEmailRegister extends AppCompatActivity implements View.OnClickListener {
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+public class ActivityEmailRegister extends BaseActivity implements View.OnClickListener {
     private CountDownTimer mCountDownTimer;
     private Button mSendVerifyCodeBtn;
     private Button mNextBtn;
