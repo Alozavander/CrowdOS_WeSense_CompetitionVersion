@@ -10,6 +10,6 @@ import retrofit2.http.POST;
 /** Register the account using Email */
 public interface PostRequestEmailRegisterAddressCheck {
     @Headers({"Content-Type: application/json","Accept: application/json"})
-    @POST("user/addUser")
+    @POST("user/checkLogin")
     Call<ResponseBody> userRegister(@Body RequestBody userInfo);
 }
