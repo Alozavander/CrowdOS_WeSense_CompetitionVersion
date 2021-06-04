@@ -211,6 +211,4 @@ public class ActivityEmailRegister extends BaseActivity implements View.OnClickL
                     }
                 }).show();
     }
-
-
 }

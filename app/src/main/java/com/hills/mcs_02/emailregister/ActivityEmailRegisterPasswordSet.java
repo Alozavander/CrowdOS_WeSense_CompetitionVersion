@@ -73,6 +73,8 @@ public class ActivityEmailRegisterPasswordSet extends BaseActivity implements Vi
         mConfirmBtn.setOnClickListener(this);
 
         bindTextWatcher();
+        /** cancel the nice name views */
+        mPwdNicknameEt.setVisibility(View.GONE);
     }
 
     private void bindTextWatcher() {
@@ -128,6 +130,7 @@ public class ActivityEmailRegisterPasswordSet extends BaseActivity implements Vi
         });
 
         /** Text box listener for nickname input */
+        /** Cancel the view listener
         mPwdNicknameEt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence seq, int start, int count, int after) {
@@ -145,7 +148,8 @@ public class ActivityEmailRegisterPasswordSet extends BaseActivity implements Vi
                 else mFinishTag[2] = false;
                 checkEnableRegister();
             }
-        });
+        });*/
+        mFinishTag[2] = true;
     }
 
     @Override
@@ -162,7 +166,7 @@ public class ActivityEmailRegisterPasswordSet extends BaseActivity implements Vi
 
     private void retrofitUserCreate() {
         mUser = new User(null, mEmailAddress,
-            mPwdSetEt.getText().toString(), mPwdNicknameEt.getText().toString(),1000);
+            mPwdSetEt.getText().toString(), null,1000);
         Retrofit lRetrofit = new Retrofit.Builder().baseUrl(getString(R.string.base_url)).addConverterFactory(GsonConverterFactory.create()).build();
         Gson lGson = new Gson();
         String requestContent = lGson.toJson(mUser);
