@@ -166,7 +166,7 @@ public class ActivityEmailRegisterPasswordSet extends BaseActivity implements Vi
 
     private void retrofitUserCreate() {
         mUser = new User(null, mEmailAddress,
-            mPwdSetEt.getText().toString(), null,1000);
+            mPwdSetEt.getText().toString(), null,1000,"null");
         Retrofit lRetrofit = new Retrofit.Builder().baseUrl(getString(R.string.base_url)).addConverterFactory(GsonConverterFactory.create()).build();
         Gson lGson = new Gson();
         String requestContent = lGson.toJson(mUser);

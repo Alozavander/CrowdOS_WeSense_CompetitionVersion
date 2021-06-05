@@ -202,7 +202,7 @@ public class ActivityRegister extends BaseActivity implements View.OnClickListen
     }
 
     private void RegisterRequest() {
-        User user = new User(null, registerUsernameEt.getText() + "", registerPwdEt.getText() + "","null",1000);
+        User user = new User(null, registerUsernameEt.getText() + "", registerPwdEt.getText() + "","null",1000,"null");
         Log.i(TAG,"Registe UserInfo:" + user.toString());
 
         final Gson gson = new Gson();

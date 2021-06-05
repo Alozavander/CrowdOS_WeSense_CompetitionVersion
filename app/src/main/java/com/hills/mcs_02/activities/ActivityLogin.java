@@ -195,7 +195,7 @@ public class ActivityLogin extends BaseActivity implements View.OnClickListener,
     }
 
     private void loginRequest() {
-        User user = new User(null,loginUsernameEt.getText() + "",loginPwdEt.getText() + "","null",1000);
+        User user = new User(null,loginUsernameEt.getText() + "",loginPwdEt.getText() + "","null",1000,"null");
         Log.i(TAG,user.toString());
 
         final Gson gson = new Gson();
