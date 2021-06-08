@@ -22,3 +22,8 @@ Trustie:https://forgeplus.trustie.net/projects/Alozavander/CrowdOS_WeSense_Compe
 
 [Document](./开源文档.docx)
 
+
+
+## Sensing Data Upload Function
+
+Each time the app is launched ten minutes later, the data collected in the previous hour will be automatically uploaded, and then the collected sensing data will be uploaded every hour 
