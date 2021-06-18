@@ -7,23 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.hills.mcs_02.BaseActivity;
+import com.hills.mcs_02.R;
+import com.hills.mcs_02.StringStore;
+import com.hills.mcs_02.exportfile.FileExport;
+import com.hills.mcs_02.fragmentspack.MCSRecyclerItemClickListener;
+import com.hills.mcs_02.sensorfunction.SensorSQLiteOpenHelper;
+import com.hills.mcs_02.viewsadapters.AdapterRecyclerViewSettingSensorData;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hills.mcs_02.fragmentspack.MCSRecyclerItemClickListener;
-import com.hills.mcs_02.R;
-import com.hills.mcs_02.StringStore;
-import com.hills.mcs_02.exportfile.FileExport;
-import com.hills.mcs_02.sensorfunction.SensorSQLiteOpenHelper;
-import com.hills.mcs_02.viewsadapters.AdapterRecyclerViewSettingSensorData;
-
-public class ActivityMineMinor5SensorData extends AppCompatActivity implements View.OnClickListener {
+public class ActivityMineMinor5SensorData extends BaseActivity implements View.OnClickListener {
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private AdapterRecyclerViewSettingSensorData mAdapter;

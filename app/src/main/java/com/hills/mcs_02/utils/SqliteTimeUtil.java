@@ -51,7 +51,7 @@ public class SqliteTimeUtil {
 
     public static String getCurrentTimeNoSpaceAndColon(){
         Date date = new Date(System.currentTimeMillis());
-        SimpleDateFormat lFormat = new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss");
+        SimpleDateFormat lFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
         return lFormat.format(date);
     }
 

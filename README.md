@@ -27,3 +27,7 @@ Trustie:https://forgeplus.trustie.net/projects/Alozavander/CrowdOS_WeSense_Compe
 ## Sensing Data Upload Function
 
 Each time the app is launched ten minutes later, the data collected in the previous hour will be automatically uploaded, and then the collected sensing data will be uploaded every hour 
+
+You can view the auto-saved sensor files under the "/SensorDataStore" relative path of the data directory in your phone. The file name is formatted as "SensorType_Date_Time.txt". The sensorType is a constant value and defined by Android. You can check it in [传感器概览  | Android 开发者  | Android Developers (google.cn)](https://developer.android.google.cn/guide/topics/sensors/sensors_overview). "StringError1088X" means that the sensor is not predefined.
+
+**ps**: If you want a csv file containing all of sensor data,  Click "Account" -> "Sensor Function"->"Output Data". The extracted file will be stored in the same path with the "senseData.csv" filename(It will be overwrote if you do the same operations). 
