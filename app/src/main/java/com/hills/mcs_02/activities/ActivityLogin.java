@@ -1,15 +1,5 @@
 package com.hills.mcs_02.activities;
 
-import com.google.gson.Gson;
-
-import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,14 +16,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hills.mcs_02.account.RegexVerify;
+import com.google.gson.Gson;
 import com.hills.mcs_02.BaseActivity;
+import com.hills.mcs_02.R;
+import com.hills.mcs_02.account.RegexVerify;
 import com.hills.mcs_02.dataBeans.BeanUserAccount;
 import com.hills.mcs_02.dataBeans.User;
 import com.hills.mcs_02.emailregister.ActivityEmailRegister;
 import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestUserAuth;
-import com.hills.mcs_02.R;
 import com.hills.mcs_02.sensorfunction.SenseDataUploadService;
+
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ActivityLogin extends BaseActivity implements View.OnClickListener, View.OnFocusChangeListener,TextWatcher{
     private EditText loginUsernameEt;
@@ -116,11 +115,11 @@ public class ActivityLogin extends BaseActivity implements View.OnClickListener,
                 else{
                     RegexVerify regexVerify = new RegexVerify();
                 /** The password is validated and logged in */
-                if(regexVerify.pwdVerify(loginPwdEt.getText().toString())) loginRequest();
+                if(regexVerify.registerUsernameVerfy(loginPwdEt.getText().toString())) loginRequest();
                 else {
                     TextView pwdTv = findViewById(R.id.minepage_login_pwd_error_tv);
                     pwdTv.setVisibility(View.VISIBLE);
-                    pwdTv.setText("密码为字母、数字的组合，6-18位");
+                    pwdTv.setText(getResources().getString(R.string.format_reminder_pwd));
                     }
                 }
                 break;

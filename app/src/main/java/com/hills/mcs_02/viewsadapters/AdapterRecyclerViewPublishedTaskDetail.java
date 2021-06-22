@@ -73,7 +73,7 @@ public class AdapterRecyclerViewPublishedTaskDetail extends RecyclerView.Adapter
 
             /** Load the picture */
             File pic = beanCombine_uut.getPic();
-            if (pic == null) holder.imageView.setVisibility(View.GONE);
+            if (pic == null || pic.length() == 0) holder.imageView.setVisibility(View.GONE);
             else Glide.with(mContext).load(pic).centerCrop().into(holder.imageView);   /** Use Glide to load pictures, if zoom */
             /** Make the picture clickable to enlarge and preview */
             holder.imageView.setOnClickListener(new View.OnClickListener() {

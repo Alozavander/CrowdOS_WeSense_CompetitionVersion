@@ -1,15 +1,5 @@
 package com.hills.mcs_02.activities;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
@@ -25,6 +15,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.hills.mcs_02.BaseActivity;
+import com.hills.mcs_02.R;
+import com.hills.mcs_02.dataBeans.BeanUserTaskWithUser;
+import com.hills.mcs_02.dataBeans.Task;
+import com.hills.mcs_02.dataBeans.UserTaskWithUser;
+import com.hills.mcs_02.downloadpack.DownloadImageUtils;
+import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestPublishedTaskDetail;
+import com.hills.mcs_02.viewsadapters.AdapterRecyclerViewPublishedTaskDetail;
+
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
@@ -33,14 +34,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.hills.mcs_02.BaseActivity;
-import com.hills.mcs_02.dataBeans.BeanUserTaskWithUser;
-import com.hills.mcs_02.dataBeans.UserTaskWithUser;
-import com.hills.mcs_02.dataBeans.Task;
-import com.hills.mcs_02.downloadpack.DownloadImageUtils;
-import com.hills.mcs_02.networkclasses.interfacesPack.PostRequestPublishedTaskDetail;
-import com.hills.mcs_02.R;
-import com.hills.mcs_02.viewsadapters.AdapterRecyclerViewPublishedTaskDetail;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ActivityTaskDetailPublished extends BaseActivity {
 
@@ -169,12 +168,14 @@ public class ActivityTaskDetailPublished extends BaseActivity {
 
         /** Initialize the RequestBody */
         Call<ResponseBody> call = request.checkUserTaskWithUsername(task.getTaskId());
+        Log.i(TAG,"The request taskID is : " + task.getTaskId());
 
         final Context CONTEXT = this;
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.i(TAG,"The response code is : " + response.code());
                 if (response.code() == 200) {
                     try {
                         /** Get the List of data returned by the response  */

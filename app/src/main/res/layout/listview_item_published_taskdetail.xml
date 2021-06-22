@@ -70,8 +70,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/published_taskDetail_tasklv_TaskContent"
-        app:layout_constraintBottom_toBottomOf="@id/published_taskDetail_tasklv_image1"
+        app:layout_constraintTop_toBottomOf="@id/published_taskDetail_tasklv_image1"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
         android:text="@string/moredata"
         android:textSize="8dp"/>
 
@@ -79,7 +80,7 @@
         android:id="@+id/listview_bottomline"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        app:layout_constraintTop_toBottomOf="@id/published_taskDetail_tasklv_image1"
+        app:layout_constraintTop_toBottomOf="@id/published_taskDetail_moreData"
         android:layout_marginTop="7dp"
         android:background="@color/listview_topline"/>
 

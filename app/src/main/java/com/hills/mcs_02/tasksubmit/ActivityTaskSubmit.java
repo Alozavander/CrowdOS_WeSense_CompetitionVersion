@@ -146,6 +146,8 @@ public class ActivityTaskSubmit extends BaseActivity {
     /** Determine which sensors are needed for the task based on the String passed by the Intent */
     private void initSensorDataPicker() {
         String sensorTypesString = getIntent().getStringExtra(getResources().getString(R.string.intent_taskSensorTypes_name));
+        /** Initialize the recyclerView and Adapter */
+        senseDataList = new ArrayList<File>();
         if (sensorTypesString.equals(StringStore.SP_STRING_ERROR)) concealDataChooseViews();
         else {
             String[] tempStirngs = sensorTypesString.split(StringStore.DIVIDER1);
@@ -155,8 +157,6 @@ public class ActivityTaskSubmit extends BaseActivity {
             /** The sensor value given by GPS is -1 */
             if (sensorTypes.length == 1 && sensorTypes[0] == -1) concealDataChooseViews();
             else {
-                /** Initialize the recyclerView and Adapter */
-                senseDataList = new ArrayList<File>();
                 /** Initialize the recyclerView of Audio */
                 RecyclerView senseDataRv = findViewById(R.id.activity_taskSub_chooseData_rv);
                 senseDataRv.setLayoutManager(new LinearLayoutManager(ActivityTaskSubmit.this, LinearLayoutManager.VERTICAL, false));
@@ -549,7 +549,7 @@ public class ActivityTaskSubmit extends BaseActivity {
                 }
             }
         } else Log.i(TAG, "video files list has no files.");
-        /** Finnaly upload the text */
+        /** Finally upload the text */
         postRequestSubmit();
     }
 
